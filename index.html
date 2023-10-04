@@ -11,15 +11,20 @@
     <script type="text/javascript">
       addEventListener('hawksearch:loaded', () => {
           HawkSearch.init({
-          clientId: "3771f9565f2d49b1a89cedfeae40aa6a",
-          search: {
-            url: window.location.pathname
-          },
-          urlPrefixes: {
-            assets: "//dev.hawksearch.net",
-            content: "//preview-dev.hawksearch.net/steph",
-          }
-        });
+            clientId: "3771f9565f2d49b1a89cedfeae40aa6a",
+            search: {
+              url: window.location.pathname
+            },
+            urlPrefixes: {
+              assets: "//dev.hawksearch.net",
+              content: "//preview-dev.hawksearch.net/steph",
+            },
+            components: {
+              'search-results-item': {
+                  template: 'search-results-item'
+                }
+            }
+          });
       });
     </script>
     <style type="text/css">
